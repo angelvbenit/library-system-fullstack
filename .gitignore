@@ -10,3 +10,6 @@ frontend/build/
 frontend/.env
 frontend/.env.local
 frontend/.DS_Store
+
+.env
+.env.*

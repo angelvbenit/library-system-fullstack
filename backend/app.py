@@ -5,16 +5,17 @@ from routes.members import members_bp
 from routes.loans import loans_bp
 from routes.fines import fines_bp
 from routes.reservations import reservations_bp
+from routes.system import system_bp
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-# Register blueprints
 app.register_blueprint(books_bp, url_prefix='/api/books')
 app.register_blueprint(members_bp, url_prefix='/api/members')
 app.register_blueprint(loans_bp, url_prefix='/api/loans')
 app.register_blueprint(fines_bp, url_prefix='/api/fines')
 app.register_blueprint(reservations_bp, url_prefix='/api/reservations')
+app.register_blueprint(system_bp, url_prefix='/api/system')
 
 @app.route('/api/health')
 def health():
