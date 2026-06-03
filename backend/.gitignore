@@ -1,0 +1,14 @@
+venv/
+.env
+__pycache__/
+*.pyc
+
+.env
+venv/
+__pycache__/git rm --cached backend/.env
+
+node_modules/
+build/
+.env
+.env.local
+.DS_Store
